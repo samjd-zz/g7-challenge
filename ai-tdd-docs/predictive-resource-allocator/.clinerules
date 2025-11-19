@@ -1,0 +1,103 @@
+# Cline Rules for Predictive Resource Allocator
+
+## Project Overview
+This is the **Predictive Government Resource Allocation Platform** - an AI system for anticipating future needs and optimizing resource distribution (G7 GovAI Challenge - Statement 3).
+
+## Core Principles
+
+### 1. Prediction Accuracy & Reliability
+- Model predictions must have >70% accuracy validated against historical data
+- Provide confidence intervals, not just point estimates
+- Regular backtesting against actual outcomes
+- Clear communication of prediction uncertainty
+- Human oversight for all high-stakes decisions
+
+### 2. Data Integration & Quality
+- Multi-source data integration (federal, state, municipal, commercial)
+- Robust data validation and quality checks
+- Handle missing and conflicting data gracefully
+- Maintain data lineage and provenance
+- Real-time and batch processing capabilities
+
+### 3. Responsible AI & Ethics
+- Transparency in optimization algorithms
+- Fairness in resource allocation (no bias toward specific communities)
+- Explainability of recommendations
+- Human-in-the-loop for final decisions
+- Regular ethics and fairness audits
+
+### 4. Operational Excellence
+- Real-time updates for emergency scenarios
+- Scenario planning and what-if analysis
+- Multi-objective optimization (cost, urgency, impact)
+- Integration with existing government systems
+- Audit trails for accountability
+
+## Development Guidelines
+
+### Predictive Modeling
+- Use appropriate time-series models (ARIMA, Prophet, LSTM)
+- Ensemble methods for robustness
+- Cross-validation with temporal splits
+- Feature engineering from domain knowledge
+- Regular model retraining with new data
+
+### Data Pipeline
+- Ingest from multiple heterogeneous sources
+- ETL with data quality monitoring
+- Feature stores for ML reproducibility
+- Real-time streaming for urgent updates
+- Historical data warehouse for analysis
+
+### Optimization Algorithms
+- Multi-objective optimization (Pareto optimal solutions)
+- Constraint satisfaction (budget, capacity, regulations)
+- Sensitivity analysis for robustness
+- Scenario comparison and trade-offs
+- Performance benchmarking
+
+### Code Quality
+- Comprehensive unit tests for all components
+- Integration tests for end-to-end workflows
+- Performance tests at scale
+- Model validation tests against baselines
+- Security testing for data access
+
+## Technology Constraints
+- **Frontend**: React/Next.js with interactive dashboards
+- **Backend**: Python (FastAPI) for ML, Node.js for APIs
+- **ML**: PyTorch/TensorFlow, scikit-learn, Prophet
+- **Optimization**: Python OR-Tools, CVXPY
+- **Data**: PostgreSQL, TimescaleDB, MongoDB, Redis
+- **Infrastructure**: Kubernetes, cloud services (AWS/Azure/GCP)
+
+## Key Features to Prioritize
+1. Multi-source data integration
+2. Infrastructure deterioration prediction
+3. Population dynamics forecasting
+4. Resource allocation optimization
+5. Emergency response module
+6. Decision support dashboard
+
+## Testing Requirements
+- Validate predictions against held-out historical data
+- Backtest allocation strategies
+- Test with real government datasets
+- Performance testing at scale
+- User acceptance testing with government planners
+
+## What NOT to Do
+- Don't deploy models without validation against historical data
+- Don't ignore prediction uncertainty/confidence intervals
+- Don't optimize without considering fairness
+- Don't make decisions without human oversight
+- Don't skip explainability for recommendations
+- Don't ignore data quality issues
+
+## Success Criteria
+- Prediction accuracy: >70% on test data
+- Cost savings: $5-10M annually demonstrated
+- Response time improvement: 30-40% faster
+- User satisfaction: >4/5 rating
+- Fairness: No significant bias in allocations
+- System uptime: 99.9%

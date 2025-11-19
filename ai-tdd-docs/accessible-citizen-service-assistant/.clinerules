@@ -1,0 +1,86 @@
+# Cline Rules for Accessible Citizen Service Assistant
+
+## Project Overview
+This is the **Accessible Citizen Service Assistant** - an AI-powered universal access platform for accessible government communication (G7 GovAI Challenge - Statement 4).
+
+## Core Principles
+
+### 1. Accessibility First
+- All features MUST meet WCAG 2.2 Level AAA standards
+- Never compromise accessibility for aesthetics or convenience
+- Test with actual assistive technologies (screen readers, voice control, etc.)
+- Support multiple input/output modalities (voice, text, video, SMS)
+
+### 2. Multilingual & Cultural Sensitivity
+- Support 100+ languages with proper translation and localization
+- Consider cultural context in all communication
+- Avoid idioms, metaphors, or culturally-specific references unless localized
+- Use plain language principles for all content
+
+### 3. Inclusive Design
+- Co-design with diverse users (disabilities, languages, ages, tech literacy)
+- Never assume user capabilities or preferences
+- Provide multiple ways to accomplish every task
+- Respect user preferences (saved settings, adaptive UI)
+
+### 4. Privacy & Security
+- Minimize personal data collection
+- Encrypt all sensitive information
+- Clear consent mechanisms for data sharing
+- Comply with GDPR, PIPEDA, and accessibility regulations
+
+## Development Guidelines
+
+### Code Standards
+- Use semantic HTML for accessibility
+- Include ARIA labels and roles
+- Ensure keyboard navigation for all interactive elements
+- Maintain 4.5:1 contrast ratio minimum (7:1 for AAA)
+- Test with screen readers (NVDA, JAWS, VoiceOver)
+
+### AI/ML Considerations
+- Translation models must preserve meaning and context
+- Voice recognition must handle diverse accents and speech patterns
+- NLP must understand multiple languages and code-switching
+- Bias testing for all AI models with diverse populations
+
+### Documentation
+- Document accessibility features and testing procedures
+- Include examples for diverse user scenarios
+- Maintain multilingual documentation
+- Create user guides in plain language
+
+## Technology Constraints
+- **Frontend**: React with accessibility libraries (react-aria, radix-ui)
+- **Backend**: FastAPI/Node.js with multilingual support
+- **AI**: Gemini API for multilingual RAG, translation services
+- **Testing**: Automated accessibility testing (axe, pa11y) + manual testing
+
+## Key Features to Prioritize
+1. Multi-modal interface (voice, text, video, SMS)
+2. Real-time translation and localization
+3. Document processing with accessibility
+4. Form completion assistance
+5. Communication drafting support
+6. Accessibility adaptation system
+
+## Testing Requirements
+- Test with diverse users (various disabilities, languages, tech literacy)
+- Validate WCAG AAA compliance
+- Performance testing with assistive technologies
+- User acceptance testing with actual citizens
+
+## What NOT to Do
+- Don't build features without accessibility from the start
+- Don't assume English-only users
+- Don't use complex language or jargon
+- Don't implement features that require specific abilities (e.g., mouse-only)
+- Don't store unnecessary personal information
+- Don't skip user testing with diverse populations
+
+## Success Criteria
+- 100% WCAG AAA compliance
+- >95% translation accuracy for pilot languages
+- >80% completion rate for form assistance
+- 4.5/5 average satisfaction rating
+- 30% of users are from underserved populations

@@ -1,0 +1,102 @@
+# Cline Rules for Intelligent Document Processor
+
+## Project Overview
+This is the **Intelligent Document Processing & Knowledge Management System** - an AI-powered platform for managing high volumes of unstructured government information (G7 GovAI Challenge - Statement 1).
+
+## Core Principles
+
+### 1. Accuracy & Reliability
+- Document processing accuracy must be >95%
+- OCR accuracy >98% for text extraction
+- Classification precision >85% on test sets
+- Always provide confidence scores with predictions
+- Human review for low-confidence results
+
+### 2. Responsible AI
+- Transparency in AI decision-making with explainability
+- Bias detection and mitigation in classification
+- Privacy-preserving document processing
+- Audit trails for all document operations
+- No PII in logs or analytics
+
+### 3. Scalability & Performance
+- Handle 10,000+ documents per hour ingestion
+- Sub-500ms search response times
+- Support petabytes of document storage
+- Horizontal scaling for all processing pipelines
+- Efficient caching strategies
+
+### 4. Security & Compliance
+- Government security classifications (Protected A/B/C)
+- End-to-end encryption at rest and in transit
+- Role-based access control (RBAC)
+- FOIA/Access to Information compliance
+- Audit logging for accountability
+
+## Development Guidelines
+
+### Document Processing
+- Support multiple formats: PDF, Word, Excel, emails, images, HTML
+- Preserve document structure (tables, headers, formatting)
+- Extract metadata automatically (author, date, title)
+- Version control for document revisions
+- Duplicate detection and deduplication
+
+### AI/ML Standards
+- Use pre-trained models when available (BERT, RoBERTa)
+- Fine-tune on government-specific documents
+- Continuous learning from user feedback
+- A/B testing for model improvements
+- Regular retraining with new data
+
+### Search & Retrieval
+- Hybrid search (keyword + semantic)
+- Faceted filtering capabilities
+- Relevance ranking with ML
+- Query expansion for better recall
+- Personalization based on user context
+
+### Code Quality
+- Unit tests for all processing functions
+- Integration tests for end-to-end flows
+- Performance benchmarks for key operations
+- Error handling with graceful degradation
+- Comprehensive logging for debugging
+
+## Technology Constraints
+- **Frontend**: React/Next.js for web portal
+- **Backend**: Python FastAPI for processing pipeline
+- **AI**: Hugging Face Transformers, Gemini API for RAG
+- **Search**: Elasticsearch + Pinecone/Weaviate for vectors
+- **Database**: PostgreSQL (metadata), Neo4j (knowledge graph)
+- **Queue**: Celery/Apache Airflow for job orchestration
+
+## Key Features to Prioritize
+1. Document ingestion (multi-format support)
+2. Automated classification and categorization
+3. Semantic search with hybrid approach
+4. Intelligent summarization (extractive & abstractive)
+5. Theme and insight identification
+6. Knowledge management and collaboration
+
+## Testing Requirements
+- Validate against labeled government document datasets
+- Test with real-world document variations
+- Performance testing at scale (100K+ documents)
+- Security testing for access controls
+- User acceptance testing with public servants
+
+## What NOT to Do
+- Don't process documents without security classification
+- Don't store unencrypted sensitive information
+- Don't skip OCR quality checks
+- Don't ignore document versions and history
+- Don't expose PII in search results or logs
+- Don't deploy models without bias testing
+
+## Success Criteria
+- Classification accuracy: >85%
+- Search relevance: >80% precision@10
+- Processing speed: 100+ docs/hour
+- Summarization quality: >4/5 user rating
+- System uptime: >99.5%
