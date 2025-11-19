@@ -47,11 +47,58 @@ flowchart TB
         U[S3<br/>Documents]
     end
     
-    A & B & C & D --> E & F
-    E & F --> G
-    G --> H & I & J & K & L
-    H & I & J & K --> M & N & O & P
-    M & N & O & P --> Q & R & S & T
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    A --> F
+    B --> F
+    C --> F
+    D --> F
+    
+    E --> G
+    F --> G
+    
+    G --> H
+    G --> I
+    G --> J
+    G --> K
+    G --> L
+    
+    H --> M
+    H --> N
+    H --> O
+    H --> P
+    I --> M
+    I --> N
+    I --> O
+    I --> P
+    J --> M
+    J --> N
+    J --> O
+    J --> P
+    K --> M
+    K --> N
+    K --> O
+    K --> P
+    
+    M --> Q
+    M --> R
+    M --> S
+    M --> T
+    N --> Q
+    N --> R
+    N --> S
+    N --> T
+    O --> Q
+    O --> R
+    O --> S
+    O --> T
+    P --> Q
+    P --> R
+    P --> S
+    P --> T
+    
     H --> U
 ```
 
@@ -1095,7 +1142,7 @@ flowchart TD
     
     D --> H[Legal Expert Review<br/>Citation Accuracy<br/>Precedent Matching]
     
-    E --> I[Search → Answer Flow<br/>Workflow Completion<br/>Alert Generation]
+    E --> I[Search to Answer Flow<br/>Workflow Completion<br/>Alert Generation]
 ```
 
 **Testing Approach (2-Week MVP):**

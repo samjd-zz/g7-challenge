@@ -48,17 +48,44 @@ flowchart TB
         V[(Neo4j<br/>Knowledge Graph)]
     end
     
-    A & B & C & D --> E
-    E --> F --> G & H
-    G & H --> I
-    I --> J & K & L & M & N
-    J & K & L & M & N --> S
-    K --> T & V
-    G & H --> U
-    Q --> O & P
+    A --> E
+    B --> E
+    C --> E
+    D --> E
+    
+    E --> F
+    F --> G
+    F --> H
+    
+    G --> I
+    H --> I
+    
+    I --> J
+    I --> K
+    I --> L
+    I --> M
+    I --> N
+    
+    J --> S
+    K --> S
+    L --> S
+    M --> S
+    N --> S
+    
+    K --> T
+    K --> V
+    
+    G --> U
+    H --> U
+    
+    Q --> O
+    Q --> P
+    
     O --> T
     P --> S
-    O & P --> R
+    
+    O --> R
+    P --> R
 ```
 
 ### 1.2 2-Week MVP Architecture Decisions
@@ -196,7 +223,9 @@ flowchart TD
     E --> H[Elasticsearch]
     F --> I[Embedding Model]
     I --> J[Pinecone/Vector DB]
-    G --> H & J
+    
+    G --> H
+    G --> J
     
     H --> K[Result Fusion]
     J --> K
@@ -879,13 +908,13 @@ flowchart TD
     A --> D[E2E Tests]
     A --> E[Performance Tests]
     
-    B --> F[Document Parsers<br/>Classification Logic<br/>Search Algorithms]
+    B --> F["Document Parsers<br/>Classification Logic<br/>Search Algorithms"]
     
-    C --> G[API Endpoints<br/>Database Operations<br/>Queue Processing]
+    C --> G["API Endpoints<br/>Database Operations<br/>Queue Processing"]
     
-    D --> H[Upload → Search Flow<br/>Classification Accuracy<br/>Summary Quality]
+    D --> H["Upload to Search Flow<br/>Classification Accuracy<br/>Summary Quality"]
     
-    E --> I[Load Testing<br/>Concurrent Users<br/>Processing Throughput]
+    E --> I["Load Testing<br/>Concurrent Users<br/>Processing Throughput"]
 ```
 
 **Testing Approach (2-Week MVP):**
@@ -920,4 +949,4 @@ flowchart TD
 
 ---
 
-**Document Status:** Complete - MVP Design  
+**Document Status:** Complete - MVP Design

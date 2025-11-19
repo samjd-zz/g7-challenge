@@ -48,8 +48,34 @@ flowchart TB
     B --> E
     C --> E
     D --> E
-    E --> F & G & H & I & J
-    F & G & H & I & J --> K & L & M & N
+    
+    E --> F
+    E --> G
+    E --> H
+    E --> I
+    E --> J
+    
+    F --> K
+    F --> L
+    F --> M
+    F --> N
+    G --> K
+    G --> L
+    G --> M
+    G --> N
+    H --> K
+    H --> L
+    H --> M
+    H --> N
+    I --> K
+    I --> L
+    I --> M
+    I --> N
+    J --> K
+    J --> L
+    J --> M
+    J --> N
+    
     F --> O
     I --> O
     G --> P
@@ -130,11 +156,11 @@ flowchart TD
 ```mermaid
 flowchart TB
     subgraph "API Endpoints"
-        A[/api/v1/auth]
-        B[/api/v1/documents]
-        C[/api/v1/forms]
-        D[/api/v1/translate]
-        E[/api/v1/chat]
+        A["POST /api/v1/auth"]
+        B["POST /api/v1/documents"]
+        C["POST /api/v1/forms"]
+        D["POST /api/v1/translate"]
+        E["POST /api/v1/chat"]
     end
     
     subgraph "Service Layer"
@@ -152,11 +178,15 @@ flowchart TB
         N[ConversationRepository]
     end
     
-    A --> F --> K
-    B --> G --> L
-    C --> H --> M
+    A --> F
+    F --> K
+    B --> G
+    G --> L
+    C --> H
+    H --> M
     D --> I
-    E --> J --> N
+    E --> J
+    J --> N
 ```
 
 **Service Responsibilities:**
@@ -622,4 +652,4 @@ flowchart TD
 ---
 
 **Document Status:** Complete - MVP Design  
-**Next Steps:** Begin implementation, user testing with accessibility focus  
+**Next Steps:** Begin implementation, user testing with accessibility focus
