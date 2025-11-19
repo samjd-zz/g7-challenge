@@ -63,3 +63,6 @@ Thumbs.db
 .cache/
 
 # Documentation build
+
+# Live screenshots/images (not for version control)
+live/
